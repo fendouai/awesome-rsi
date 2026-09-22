@@ -19,11 +19,15 @@
 
 ## 这份仓库是什么
 
-本仓库不是项目名堆砌，而是一套 **RSI 技术地图**：把 Data / Model / Harness / Evaluator / Research Process 放进统一框架，区分「已经验证的技术进展」与「未来推演」，并持续跟踪基准测试与产业信号。
+本仓库不是项目名堆砌，而是一套 **RSI 技术地图**：把 Data / Model / Harness / Evaluator / Research Process 放进统一框架，区分「已经验证的技术进展」与「未来推演」，并持续跟踪基准测试、综述与产业信号。
+
+组织方法：**分层（L1–L8）× 多轴分类（改什么 × 闭环程度 × 接地极性）× 证据等级**。
 
 - 想看**结论**：从 [执行摘要](docs/00-overview.md) 开始。
+- 想理解**怎么分类**：看 [分类与技术栈](docs/02-taxonomy.md)。
 - 想查**某个项目**：看 [系统与项目地图](docs/12-systems.md)。
 - 想查**某个 Benchmark**：看 [Benchmark 生态](docs/11-benchmarks.md)。
+- 想看**综述与同类清单**：看 [Survey 与相关清单](docs/19-surveys.md)。
 - 想知道**证据可信度**：看 [证据等级与数据核实](docs/15-evidence.md)。
 
 ---
@@ -36,7 +40,7 @@
 |---|---|
 | [00 · 执行摘要与边界](docs/00-overview.md) | 2026 年 RSI 到底走到了哪一步？ |
 | [01 · 理论基础](docs/01-foundations.md) | Gödel Machine 与理论 RSI 从何而来？ |
-| [02 · 分类与技术栈](docs/02-taxonomy.md) | RSI 与相邻概念的边界；L1–L8 七层技术栈 |
+| [02 · 分类与技术栈](docs/02-taxonomy.md) | 术语界定；多轴分类（what × closure × polarity）；L1–L8 技术栈 |
 | [03 · 技术发展史](docs/03-history.md) | 五个阶段与关键里程碑时间轴 |
 | [04 · 统一架构与 Evaluator](docs/04-architecture.md) | 一个 RSI 系统由哪些模块构成？如何验证改进？ |
 
@@ -45,18 +49,18 @@
 | 文档 | 被改进对象 | 代表工作 |
 |---|---|---|
 | [05 · 数据生态](docs/05-data.md) | 数据形态 | Executable Task / Research Repo / Trajectory / Experience |
-| [06 · Harness 与 Memory RSI](docs/06-harness-rsi.md) | 脚手架 / 记忆 | STOP、ADAS、Gödel Agent、SICA、DGM、ModularRSI、Recuris |
-| [07 · Data RSI](docs/07-data-rsi.md) | 训练数据 | RSIBench-Data |
-| [08 · Model RSI](docs/08-model-rsi.md) | 模型权重 | SEAL、Agent0、ScienceBuddy |
+| [06 · Harness 与 Memory RSI](docs/06-harness-rsi.md) | 脚手架 / 记忆 | STOP、DGM、ModularRSI、RRSI、SoL-Pi、Recuris、RSIAgent |
+| [07 · Data RSI](docs/07-data-rsi.md) | 训练数据 | RSIBench-Data、PostTrainBench |
+| [08 · Model RSI](docs/08-model-rsi.md) | 模型权重 | SEAL、NeoHorse-1、HyperAgents、ScienceBuddy |
 | [09 · Algorithm RSI](docs/09-algorithm-rsi.md) | 学习算法 | AI4AI-Bench、OpenRSI / OpenMLE / Frontis-MA1 |
-| [10 · Meta-RSI 与 Search RSI](docs/10-meta-rsi.md) | 搜索 / 改进策略 | Dream-RSI、MetaRSI |
+| [10 · Meta-RSI 与 Search RSI](docs/10-meta-rsi.md) | 搜索 / 改进策略 | Dream-RSI、MetaRSI、SIFT |
 
 ### 第三部分 · 生态
 
 | 文档 | 内容 |
 |---|---|
-| [11 · Benchmark 生态](docs/11-benchmarks.md) | 横向对比、基线成绩、能力阶梯 |
-| [12 · 系统与项目地图](docs/12-systems.md) | 前沿论文地图与项目梯队 |
+| [11 · Benchmark 生态](docs/11-benchmarks.md) | 横向对比、前沿实验室评测框架、基线成绩 |
+| [12 · 系统与项目地图](docs/12-systems.md) | 前沿论文地图、2026 新项目与项目梯队 |
 | [13 · 产业与组织](docs/13-industry.md) | Frontier Labs、创业公司、产业链分层 |
 
 ### 第四部分 · 展望与可信度
@@ -65,6 +69,15 @@
 |---|---|
 | [14 · 瓶颈与路线图](docs/14-outlook.md) | 六大瓶颈、1–2 年 / 3–5 年路线、商业机会 |
 | [15 · 证据等级与核实](docs/15-evidence.md) | E0–E5 证据等级、数据核实说明、引用来源 |
+
+### 第五部分 · 专题与索引
+
+| 文档 | 内容 |
+|---|---|
+| [16 · 理论与经济学](docs/16-theory.md) | GAI 形式框架、RSI 经济学、极限与开放问题 |
+| [17 · 安全、对齐与治理](docs/17-safety.md) | misevolution、防御护栏、前沿实验室治理框架 |
+| [18 · 具身与物理自改进](docs/18-embodied.md) | 具身 RSI 范式、代表系统、与软件 RSI 的差异 |
+| [19 · Survey 与相关清单](docs/19-surveys.md) | 综述索引、相关 awesome 清单对比、组织方法 |
 
 ---
 

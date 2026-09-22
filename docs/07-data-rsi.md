@@ -18,7 +18,7 @@ Data RSI 位于 RSI 技术栈的 **L5**。它不修改模型结构，也不修�
 
 ## 2. RSIBench-Data：Data Research
 
-RSIBench-Data 的研究问题正是：
+RSIBench-Data（[arXiv 2607.25886](https://arxiv.org/abs/2607.25886)）的研究问题正是：
 
 > AI 是否能够根据自己的失败，判断下一轮应该训练什么数据？
 
@@ -81,6 +81,15 @@ Data Research
 | **Best-State Preservation** | 保留历史最优，而非接受最后一次结果 |
 | **去重与去泄漏** | 训练数据需对 eval benchmark 去重（OpenRSI 已采用） |
 | **端到端评测成本** | 每次数据策略变更都需重新训练，成本远高于 Harness RSI |
+
+---
+
+## 5. 相关数据研究工作
+
+- **PostTrainBench**（[arXiv 2603.08640](https://arxiv.org/abs/2603.08640)，[aisa-group/PostTrainBench](https://github.com/aisa-group/PostTrainBench)）— 给 Agent 一个 base model、一张 H100、十小时，自主研究并执行最强 post-training 策略。
+- **DataChef**（[yichengchen24/DataChef](https://github.com/yichengchen24/DataChef)）— 用 RL 为 LLM 适配寻找最优 data recipe。
+- **FT-Dojo**（[arXiv 2603.01712](https://arxiv.org/abs/2603.01712)）— 把数据收集、训练、评测、诊断、策略修订变成可执行环境。
+- **Data-Efficient Language Modeling / Research RSI**（[arXiv 2609.10702](https://arxiv.org/abs/2609.10702)）— 把研究过程本身作为 RSI 对象，在 BabyLM Strict-Small 上做长期自主研究。
 
 ---
 

@@ -17,20 +17,32 @@
 | RSI-Exam | Research Agent | ✓ | 长程研究与泛化 |
 | AI4AI-Bench | Training Algorithm | ✓ | Algorithm Discovery |
 | RSIBench-Data | Data Strategy | ✓ / Controlled | Data Research |
+| PostTrainBench | LLM Post-Training | ✓ | 自主后训练 |
+| MLS-Bench | ML Method Invention | ✓ | 发明可泛化 ML 方法 |
+| AutoLab | Auto Research & Eng | ✓ | 长程闭环优化 |
+| RSI-Bench | Self-Modification | ✓ | 六轴自修改 |
 | Scale RSI Bench | AI Research | ✓ | Frontier R&D |
 | MLE-Bench | ML Engineering | 部分 | MLE |
+| MLAgentBench | ML Experiments | 部分 | 自主实验 |
 | NatureBench | Scientific ML | ✓ | SOTA Replication |
+| SAEScientist-Bench | Interpretability Research | ✓ | 机制可解释性研究 |
 | PaperBench | Research Replication | ✓ | Paper Reproduction |
-| SWE-Bench Verified | Software | ✓ | Software Engineering |
-| Terminal-Bench | Agent Harness | ✓ | Computer Use |
+| SWE-Bench Verified / Pro | Software | ✓ | Software Engineering |
+| Terminal-Bench / LH-Terminal-Bench | Agent Harness | ✓ | Computer Use |
+| OSWorld 2.0 | Computer Use | ✓ | 真实工作流 |
+| TheAgentCompany | Workplace Agents | ✓ | 跨应用办公任务 |
+| MCPMark | MCP Workflows | ✓ | 有状态工具工作流 |
+
+> 部分 benchmark（如 RSI-Bench、PAST-Bench）社区实现星数很低，属**早期信号**，引用需谨慎。
 
 ### 能力阶梯
 
 按能力分组：
 
-- **Software Engineering** — [SWE-bench](https://github.com/SWE-bench/SWE-bench)（含 Verified / Lite / Multilingual / Multimodal 变体）、Polyglot（多语言 coding，DGM 使用）。
-- **ML Engineering / AI4AI** — [MLE-bench](https://github.com/openai/mle-bench)（75 个 Kaggle 竞赛）、[RE-Bench](https://github.com/METR/RE-Bench)（AI R&D 能力）。
-- **Scientific Discovery** — [NatureBench](https://github.com/FrontisAI/NatureBench)（90 个 Nature 系论文任务）。
+- **Software Engineering** — [SWE-bench](https://github.com/SWE-bench/SWE-bench)（含 Verified / Lite / Multilingual / Multimodal 变体）、[SWE-Bench Pro](https://arxiv.org/abs/2509.16941)（1,865 个抗污染企业任务）、Polyglot（多语言 coding，DGM 使用）。
+- **ML Engineering / AI4AI** — [MLE-bench](https://github.com/openai/mle-bench)（75 个 Kaggle 竞赛）、[RE-Bench](https://github.com/METR/RE-Bench)、[MLS-Bench](https://arxiv.org/abs/2605.08678)（140 任务 / 12 域）、[AutoLab](https://arxiv.org/abs/2606.05080)（36 个长程闭环任务）、[MLAgentBench](https://github.com/snap-stanford/MLAgentBench)。
+- **Scientific Discovery** — [NatureBench](https://github.com/FrontisAI/NatureBench)（90 个 Nature 系论文任务）、[SAEScientist-Bench](https://arxiv.org/abs/2609.09113)。
+- **Computer / Workplace Use** — [OSWorld 2.0](https://arxiv.org/abs/2606.29537)、[TheAgentCompany](https://arxiv.org/abs/2412.14161)、[MCPMark](https://arxiv.org/abs/2509.24002)、[Long-Horizon-Terminal-Bench](https://arxiv.org/abs/2607.08964)。
 - **Reasoning** — DROP、MGSM、GPQA、MMLU、Game of 24；MATH / MATH500、GSM8K、ARC、HumanEval、MBPP。
 
 ---
@@ -58,9 +70,38 @@
 
 固定 Base Model、Post-training Stack、Evaluator、Training Backend、Compute Budget，仅让 Agent 负责 **Data Strategy**。详见 [07 · Data RSI](07-data-rsi.md)。([Evolvent AI][6])
 
+### PostTrainBench
+
+给自主 Agent 一个 base model、一张 H100、十小时，让它研究并执行能找到的最强 post-training 策略，直接度量「AI 能否自动化 LLM 后训练」。（[arXiv 2603.08640](https://arxiv.org/abs/2603.08640)，[aisa-group/PostTrainBench](https://github.com/aisa-group/PostTrainBench)）
+
+### MLS-Bench / AutoLab
+
+- **MLS-Bench**（[arXiv 2605.08678](https://arxiv.org/abs/2605.08678)）— 140 个任务、12 个 ML 研究域，测「AI 能否发明可泛化、可扩展的 ML 方法」。
+- **AutoLab**（[arXiv 2606.05080](https://arxiv.org/abs/2606.05080)）— 36 个专家设计的真实长程闭环优化任务，评测前沿 Agent 的自动研究与工程能力。
+
+### RSI-Bench
+
+社区实现的多轴框架，评测六个维度：self-modification depth、improvement trajectories、operator discovery、meta-adaptation、safety、autonomous goal generation。（[sunghunkwag/rsi-bench](https://github.com/sunghunkwag/rsi-bench)）
+
+> ⚠️ 社区早期项目，星数低，仅作方向参考。
+
 ---
 
-## 3. 基准测试成绩
+## 3. 前沿实验室评测框架
+
+除学术 benchmark 外，Frontier Lab 已把「AI R&D / 自我改进能力」纳入正式评测与治理框架：
+
+| 机构 | 框架 / 指标 | 评测对象 |
+|---|---|---|
+| **Anthropic** | Responsible Scaling Policy · AI R&D-4 | 以「完全自动化一名入门级远程研究员」为阈值 |
+| **Google DeepMind** | Frontier Safety Framework · ML R&D | 用 CCL / TCL 衡量显著加速或自动化 AI R&D 的能力 |
+| **OpenAI** | Preparedness Framework · AI Self-Improvement | Internal Research Debugging、KernelGen 1P、NanoGPT、PostTrainBench Lite、MLE-Bench Revised 等聚合为 **RSI Index** |
+
+> 这些框架把学术评测推向**治理级测量**——不仅问「分数多少」，还问「改进的是什么、是否可信」。见 [17 · 安全、对齐与治理](17-safety.md)。
+
+---
+
+## 4. 基准测试成绩
 
 全部来自论文 / 官方 README 一手来源。
 
@@ -113,7 +154,7 @@
 
 ---
 
-## 4. Benchmark 追踪优先级
+## 5. Benchmark 追踪优先级
 
 **一级（RSI 核心）**
 

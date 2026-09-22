@@ -68,6 +68,22 @@ Project Claim ≠ Benchmark Result ≠ Independent Verification
 | [14] | TechCrunch — Recursive Superintelligence | https://techcrunch.com/2026/07/28/recursive-superintelligence-signs-400-compute-deal-with-amazon/ |
 | [15] | Nasdaq — Deep Cogito | https://www.nasdaq.com/press-release/deep-cogito-raises-43m-series-advance-post-training-engine-frontier-intelligence-2026 |
 | [16] | Ineffable Intelligence | https://www.ineffable.ai/ |
+| [17] | Generalized Agent Iteration（arXiv 2609.13406） | https://arxiv.org/abs/2609.13406 |
+| [18] | The Economics of RSI（arXiv 2609.15802） | https://arxiv.org/abs/2609.15802 |
+| [19] | RRSI（arXiv 2609.24972） | https://arxiv.org/abs/2609.24972 |
+| [20] | ModularRSI（arXiv 2609.14857） | https://arxiv.org/abs/2609.14857 |
+| [21] | Dream-RSI（arXiv 2609.14858） | https://arxiv.org/abs/2609.14858 |
+| [22] | MetaRSI / RSI2（arXiv 2609.06396） | https://arxiv.org/abs/2609.06396 |
+| [23] | NeoHorse-1（arXiv 2609.08183） | https://arxiv.org/abs/2609.08183 |
+| [24] | RSIAgent（arXiv 2609.15364） | https://arxiv.org/abs/2609.15364 |
+| [25] | SoL-Pi（arXiv 2609.20519） | https://arxiv.org/abs/2609.20519 |
+| [26] | SIFT（arXiv 2609.19526） | https://arxiv.org/abs/2609.19526 |
+| [27] | ScienceBuddy（arXiv 2609.17523） | https://arxiv.org/abs/2609.17523 |
+| [28] | PostTrainBench（arXiv 2603.08640） | https://arxiv.org/abs/2603.08640 |
+| [29] | RSIBench-Data（arXiv 2607.25886） | https://arxiv.org/abs/2607.25886 |
+| [30] | lobehub/awesome-rsi（同类清单对照） | https://github.com/lobehub/awesome-rsi |
+
+> 新增来源的检索方式：arXiv API `all:"recursive self-improvement"` 与 GitHub Search API，均于 2026-09 读取。星数与列表会随时间变化，引用前请复核。
 
 ---
 

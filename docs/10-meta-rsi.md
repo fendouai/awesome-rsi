@@ -10,7 +10,7 @@
 
 ## 1. 从单层优化到组合优化
 
-[MetaRSI-v1](https://cosmosmind.ai/research/metarsi-v1)（CosmosMind）把 RSI 拆为三类 Operator：
+[MetaRSI-v1](https://cosmosmind.ai/research/metarsi-v1)（[arXiv 2609.06396](https://arxiv.org/abs/2609.06396)，CosmosMind）把 RSI 拆为三类 Operator：
 
 - **Data-RSI** — 修改训练数据。
 - **Harness-RSI** — 修改系统 Scaffold。
@@ -41,7 +41,7 @@ MetaRSI-v1 明确提出统一 Loop Kernel，并将三类 Operator 进行组合�
 
 ## 2. Dream-RSI：改进「搜索方法」
 
-[Dream-RSI](https://www.dream-rsi.com/) 是当前 Meta-RSI 中非常值得关注的工作。
+[Dream-RSI](https://www.dream-rsi.com/)（[arXiv 2609.14858](https://arxiv.org/abs/2609.14858)，[zhengkid/Dream-RSI](https://github.com/zhengkid/Dream-RSI)）是当前 Meta-RSI 中非常值得关注的工作。
 
 传统 Agent：
 
@@ -88,6 +88,10 @@ More History
 > **How to explore。**
 
 这是 RSI 从 **Solution Optimization** 迈向 **Search Optimization** 的重要一步。
+
+### SIFT：用快速树搜索降低评测瓶颈
+
+[SIFT](https://arxiv.org/abs/2609.19526)（Recursive Self Improvement via Fast Tree-search）指出：候选自修改的**评测**才是运行时瓶颈。它用 LLM-as-judge 成对比较候选 patch，经正则化 Bradley-Terry 模型聚合胜率，再驱动轻量、解耦的树搜索，把昂贵的下游任务评测只留给最有希望的节点。在完整 Polyglot 上以更低的 CPU 时、墙钟时间与 API 成本超过既有树搜索自我进化框架。
 
 ---
 

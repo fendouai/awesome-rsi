@@ -44,46 +44,74 @@
 
 ## 2. 项目地图
 
-### Research Map
-
-- awesome-rsi（本仓库）
-- Awesome RSI Research
-- RSI paper lists
-
 ### Harness Evolution
 
-- ModularRSI
+- ModularRSI（[arXiv 2609.14857](https://arxiv.org/abs/2609.14857)）
 - OpenRSI
 - Recuris
+- RRSI（[google-research/rrsi](https://github.com/google-research/rrsi)）
+- SoL-Pi（[NVlabs/SoL-Pi](https://github.com/NVlabs/SoL-Pi)）
+- AutoHarness、Continual Harness、MetaSkill-Evolve、SkillOpt、Agentic Harness Engineering
 - RSI-Harness
 
-### AI4AI
+### Model RSI
 
-- OpenMLE
-- Frontis-MA1
-- ScienceBuddy
+- SEAL
+- NeoHorse-1（[TokenRhythm/NeoHorse](https://github.com/TokenRhythm/NeoHorse)）
+- HyperAgents（[facebookresearch/HyperAgents](https://github.com/facebookresearch/HyperAgents)）
+- SIA（[hexo-ai/sia](https://github.com/hexo-ai/sia)）
+
+### Memory RSI
+
+- Recuris
+- RSIAgent（[AetherLabsAI/RSIAgent](https://github.com/AetherLabsAI/RSIAgent)）
+- ACE、EvolveR、ExpeL
+
+### AI4AI / Automated Research
+
+- OpenMLE / Frontis-MA1
+- ScienceBuddy（[Gen-Verse/ScienceBuddy](https://github.com/Gen-Verse/ScienceBuddy)）
+- The AI Scientist-v2、MLEvolve、AutoResearch、RD-Agent、RSIHub
 
 ### Data RSI
 
 - RSIBench-Data
+- PostTrainBench、DataChef、FT-Dojo
 
-### Meta-RSI
+### Meta-RSI / Search RSI
 
-- Dream-RSI
-- MetaRSI
+- Dream-RSI（[zhengkid/Dream-RSI](https://github.com/zhengkid/Dream-RSI)）
+- MetaRSI（[arXiv 2609.06396](https://arxiv.org/abs/2609.06396)）
+- SIFT（[arXiv 2609.19526](https://arxiv.org/abs/2609.19526)）
 
 ### Benchmark
 
-- RSI-Exam
-- AI4AI-Bench
-- Scale RSI Bench
-- NatureBench
-- PaperBench
-- MLE-Bench
+- RSI-Exam、AI4AI-Bench、RSIBench-Data、Scale RSI Bench
+- MLS-Bench、AutoLab、PostTrainBench、MLAgentBench、SAEScientist-Bench
+- NatureBench、PaperBench、MLE-Bench、SWE-Bench、Terminal-Bench、OSWorld 2.0
+
+### 相关清单
+
+- lobehub/awesome-rsi、KaiWU5/Awesome-AI4AI、ANative-Lab/Awesome-Self-Evolving-Agents 等，对比见 [19 · Survey 与相关清单](19-surveys.md)。
 
 ---
 
-## 3. 项目梯队
+## 3. 2026 值得关注的新项目
+
+| 项目 | 类别 | 为何值得关注 |
+|---|---|---|
+| **RRSI** | Harness RSI | 首个把**正则化**系统引入 harness 自改进，显式对抗 benchmark 过拟合 |
+| **SoL-Pi** | Harness RSI | 把 auto-research loop 推向 **token 效率**，接近生产可用 |
+| **NeoHorse-1** | Model RSI | routing harness 驱动的 agentic post-training，闭合评测–选择–更新环 |
+| **HyperAgents** | Model/Meta RSI | 自我修改过程本身可演化并跨域迁移 |
+| **SIA** | Harness+Model | 同一循环内同时更新 harness 与权重 |
+| **ModularRSI** | Harness RSI | benchmark-disjoint + 模块化，直指 credit assignment |
+| **SIFT** | Search RSI | 用 judge 信号缓解自修改评测瓶颈 |
+| **RSIAgent** | Memory RSI | broad-then-deep 探索，记忆冻结后可复用 |
+
+---
+
+## 4. 项目梯队
 
 **第一梯队（核心研究项目）**
 
@@ -101,7 +129,7 @@ OpenMLE   Frontis-MA1   RSI-Harness   NatureBench
 
 ---
 
-## 4. Systems 清单（按世代）
+## 5. Systems 清单（按世代）
 
 按世代分组，不按成绩排名。
 

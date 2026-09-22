@@ -50,6 +50,10 @@ OpenAI 2026 年 9 月还公开表示，其目标是构建能够在人类监督�
 
 > 这说明 **Automated AI Research 已不再只是外围研究，而成为 Frontier Lab 的核心能力建设。**
 
+### Google DeepMind：Frontier Safety Framework · ML R&D
+
+DeepMind 用专门的 CCL / TCL 与评测协议，衡量「显著加速或自动化 AI R&D」的能力。三大实验室的评测框架（Anthropic RSP、DeepMind FSF、OpenAI Preparedness / RSI Index）汇总见 [17 · 安全、对齐与治理](17-safety.md)。
+
 ---
 
 ## 2. RSI 公司生态

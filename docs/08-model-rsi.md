@@ -19,9 +19,20 @@
 
 ---
 
-## 2. ScienceBuddy：Harness 与 Model Co-Evolution
+## 2. 2026 年 Model RSI 新进展
 
-ScienceBuddy 提出了 **Recursive-in-Recursive Self-Improvement**。它包含两个循环。
+| 系统 | 机构 | 核心机制 |
+|---|---|---|
+| **NeoHorse-1**（[arXiv 2609.08183](https://arxiv.org/abs/2609.08183)，[TokenRhythm/NeoHorse](https://github.com/TokenRhythm/NeoHorse)） | TokenRhythm | 异构模型池 + 智能路由，把路由信号组织成三段课程 SFT 与 routing-guided on-policy distillation；能力导向分配把评测反馈转成下一轮训练配比，闭合 evaluation–selection–update 环。11 个 benchmark 上 4B 由 58.94→64.87、9B 由 65.60→69.04 |
+| **HyperAgents**（[arXiv 2603.19461](https://arxiv.org/abs/2603.19461)，[facebookresearch/HyperAgents](https://github.com/facebookresearch/HyperAgents)） | Meta | 把 task agent 与可编辑 meta-agent 结合，其自我修改过程本身也可演化，并能跨域迁移改进 |
+| **SIA**（[arXiv 2605.27276](https://arxiv.org/abs/2605.27276)，[hexo-ai/sia](https://github.com/hexo-ai/sia)） | Hexo AI | 在同一个自我改进循环中同时更新 harness 与模型权重 |
+| **Meta-Rewarding**（[arXiv 2407.19594](https://arxiv.org/abs/2407.19594)） | — | 让模型评判自己的评判，迭代提升评估与指令跟随能力 |
+
+---
+
+## 3. ScienceBuddy：Harness 与 Model Co-Evolution
+
+[ScienceBuddy](https://github.com/Gen-Verse/ScienceBuddy)（[arXiv 2609.17523][9]）提出了 **Recursive-in-Recursive Self-Improvement**。它包含两个循环。
 
 Inner Loop（固定模型，改 Harness）：
 
@@ -59,7 +70,7 @@ Model improves Harness
 
 ---
 
-## 3. 为什么 Co-Evolution 更现实
+## 4. 为什么 Co-Evolution 更现实
 
 | 维度 | 直接改权重 | Model ↔ Harness 共进化 |
 |---|---|---|
